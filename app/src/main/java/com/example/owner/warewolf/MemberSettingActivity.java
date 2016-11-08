@@ -12,12 +12,12 @@ import android.widget.ListView;
 
 public class MemberSettingActivity extends Activity {
 
-    EditText inputname;
-    Button addbutton;
-    Button nextbutton;
-    ListView MemberList;
-    SpannableStringBuilder sb;
-    ArrayAdapter<String> adapter;
+    EditText et_input_name;
+    Button bt_add;
+    Button bt_next;
+    ListView lv_member_list;
+    SpannableStringBuilder sb_input_name;
+    ArrayAdapter<String> aa_input_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,26 +28,26 @@ public class MemberSettingActivity extends Activity {
 
         final Intent class_setting = new Intent(this, ClassSettingActivity.class);
 
-        inputname = (EditText)findViewById(R.id.InputName);
-        nextbutton = (Button)findViewById(R.id.NextButton);
-        addbutton = (Button)findViewById(R.id.AddButton);
-        MemberList = (ListView)findViewById(R.id.MemberList);
+        et_input_name = (EditText)findViewById(R.id.InputName);
+        bt_next = (Button)findViewById(R.id.NextButton);
+        bt_add = (Button)findViewById(R.id.AddButton);
+        lv_member_list = (ListView)findViewById(R.id.MemberList);
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-        MemberList.setAdapter(adapter);
+        aa_input_name = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+        lv_member_list.setAdapter(aa_input_name);
 
-        addbutton.setOnClickListener(new View.OnClickListener() {
+        bt_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sb = (SpannableStringBuilder)inputname.getText();
-                inputname.setText("");
-                if(sb.toString().isEmpty() == false) {
-                    adapter.add(sb.toString());
-                    MemberList.setAdapter(adapter);
+                sb_input_name = (SpannableStringBuilder)et_input_name.getText();
+                et_input_name.setText("");
+                if(sb_input_name.toString().isEmpty() == false) {
+                    aa_input_name.add(sb_input_name.toString());
+                    lv_member_list.setAdapter(aa_input_name);
                 }
             }
         });
-        nextbutton.setOnClickListener(new View.OnClickListener() {
+        bt_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(class_setting);

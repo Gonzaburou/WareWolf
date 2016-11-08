@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/gamestartbutton"
         android:gravity="center"
-        android:id="@+id/warewolf"
+        android:id="@+id/WareWolfTitle"
         android:text="WareWolf"
         android:textStyle="normal|bold"
         android:fontFamily="sans-serif"

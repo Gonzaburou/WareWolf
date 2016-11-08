@@ -10,26 +10,26 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-    TextView warewolf;
-    Button gamestartbutton;
-    Button settingsbutton;
-    Button helpbutton;
+    TextView tv_ware_wolf;
+    Button bt_game_start;
+    Button bt_settings;
+    Button bt_help;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        warewolf = (TextView)findViewById(R.id.warewolf);
-        warewolf.setTextColor(Color.RED);
+        tv_ware_wolf = (TextView)findViewById(R.id.WareWolfTitle);
+        tv_ware_wolf.setTextColor(Color.RED);
 
-        final Intent member_settings = new Intent(this, MemberSettingActivity.class);
+        final Intent it_member_settings = new Intent(this, MemberSettingActivity.class);
 
-        gamestartbutton = (Button)findViewById(R.id.gamestartbutton);
-        gamestartbutton.setOnClickListener(new View.OnClickListener() {
+        bt_game_start = (Button)findViewById(R.id.gamestartbutton);
+        bt_game_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(member_settings);
+                startActivity(it_member_settings);
             }
         });
     }

@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MemberSettingActivity" />
-        <activity android:name=".ClassSettingActivity"></activity>
+        <activity android:name=".ClassSettingActivity" />
+        <activity android:name=".ClassListActivity"></activity>
     </application>
 
 </manifest>

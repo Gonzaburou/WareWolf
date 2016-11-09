@@ -26,7 +26,7 @@ public class MemberSettingActivity extends Activity {
 
         getIntent();
 
-        final Intent class_setting = new Intent(this, ClassSettingActivity.class);
+        final Intent it_class_setting = new Intent(this, ClassSettingActivity.class);
 
         et_input_name = (EditText)findViewById(R.id.InputName);
         bt_next = (Button)findViewById(R.id.NextButton);
@@ -50,7 +50,7 @@ public class MemberSettingActivity extends Activity {
         bt_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(class_setting);
+                startActivity(it_class_setting);
             }
         });
     }

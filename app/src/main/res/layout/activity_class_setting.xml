@@ -18,7 +18,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/ClassTable">
 
             <!-- Members -->
             <TableRow>
@@ -285,6 +286,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:id="@+id/MysteryFoxSeekBar"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:id="@+id/NextButton2"/>
 
         </TableLayout>
 

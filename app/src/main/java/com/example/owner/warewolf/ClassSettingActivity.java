@@ -1,8 +1,11 @@
 package com.example.owner.warewolf;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -25,11 +28,14 @@ public class ClassSettingActivity extends Activity {
             sb_ware_wolf_number,
             sb_madman_number,
             sb_mystery_fox_number;
+    Button bt_next_button_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_class_setting);
+
+        final Intent it_class_list = new Intent(this, ClassListActivity.class);
 
         getIntent();
 
@@ -51,6 +57,15 @@ public class ClassSettingActivity extends Activity {
         sb_ware_wolf_number = (SeekBar)findViewById(R.id.WareWolfSeekBar);
         sb_madman_number = (SeekBar)findViewById(R.id.MadmanSeekBar);
         sb_mystery_fox_number = (SeekBar)findViewById(R.id.MysteryFoxSeekBar);
+
+        bt_next_button_2 = (Button)findViewById(R.id.NextButton2);
+
+        bt_next_button_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(it_class_list);
+            }
+        });
 
     }
 }
